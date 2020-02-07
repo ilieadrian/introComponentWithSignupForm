@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; }
+
+.bg {
+  background: url("/dist/images/bg-intro-desktop.png") #ff7a7a;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }
+
+.container {
+  max-width: 1440px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 12rem 16.5rem 12rem 16.5rem; }
+  .container .left-col {
+    flex: 0 0 50%;
+    width: 100%; }
+  .container .right-col {
+    flex: 0 0 50%;
+    width: 100%; }
+
+.left-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  color: #fff; }
+  .left-col h1 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 2.9rem; }
+  .left-col p {
+    font-size: 1.6rem;
+    line-height: 1.65; }
+
+.right-col .cta {
+  display: flex;
+  background: #6055a5;
+  padding: 1.85rem 4rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  margin-bottom: 2.2rem;
+  box-shadow: 0px 8px 0px rgba(62, 60, 73, 0.2); }
+  .right-col .cta p {
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 400; }
+  .right-col .cta span {
+    font-size: 1.6rem;
+    font-weight: 500; }
+
+.right-col .email__form {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 8px 0px rgba(62, 60, 73, 0.2);
+  padding: 4rem 4rem 5rem 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .right-col .email__form .form-control input {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+    min-width: 28rem;
+    max-width: 465px;
+    height: 5.5rem;
+    margin-top: 2rem;
+    outline: none;
+    border: 0.5px solid #3e3c49;
+    border-radius: 0.5rem;
+    padding-left: 3rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #3e3c49;
+    background: transparent;
+    display: block; }
+    .right-col .email__form .form-control input:focus {
+      outline: none;
+      border: 1.5px solid #3e3c49;
+      transition: all 0.2s ease-in; }
+  .right-col .email__form .form-control p {
+    display: none; }
+  .right-col .email__form .error input {
+    border: 1.5px solid #ff7a7a;
+    background: url("/dist/images/icon-error.svg") no-repeat scroll 95%;
+    color: #ff7a7a; }
+    .right-col .email__form .error input:focus {
+      border: 1.5px solid #ff7a7a; }
+  .right-col .email__form .error p {
+    color: red;
+    display: block;
+    text-align: end;
+    padding-top: 1rem;
+    font-weight: 500;
+    font-style: italic; }
+
+.right-col button {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background: #38cc8c;
+  height: 5.5rem;
+  margin: 2rem 0;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 0px #30bb7f; }
+
+.right-col .legal {
+  color: #b9b6d3;
+  font-weight: 600;
+  text-align: center; }
+  .right-col .legal #ts-span {
+    color: #ff7a7a;
+    font-weight: 700; }
+
+.attribution {
+  color: #3e3c49;
+  margin-bottom: 0.5rem; }
+  .attribution a {
+    color: #3e3c49;
+    text-decoration: none; }
+
+@media screen and (max-width: 1280px) {
+  .container {
+    padding: 12rem 10rem 12rem 10rem; }
+  h1 {
+    margin-right: 0.5rem; }
+  p {
+    margin-right: 0.5rem; } }
+
+@media screen and (max-width: 980px) {
+  .container {
+    padding: 10rem 8rem 10rem 8rem; }
+  .left-col h1 {
+    font-style: 3.5rem;
+    margin-right: 0.5rem; }
+  .left-col p {
+    margin-right: 0.5rem; } }
+
+@media screen and (max-width: 880px) {
+  .container {
+    padding: 5rem 4rem 5rem 4rem; }
+  .right-col .email__form {
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem; }
+  .right-col .cta {
+    padding: 1.85rem 2rem; } }
+
+@media screen and (max-width: 750px) {
+  .bg {
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    height: 100%;
+    min-height: 100vh;
+    align-items: center; }
+  .container {
+    max-width: 375px;
+    margin: 0;
+    padding: 10rem 2.5rem 2.5rem 2.5rem;
+    align-content: center;
+    justify-content: center;
+    align-items: center; }
+    .container .left-col {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      color: #fff;
+      min-width: 100%; }
+      .container .left-col h1 {
+        font-size: 3.3rem;
+        font-weight: 600; }
+      .container .left-col p {
+        margin-bottom: 7rem; }
+    .container .right-col .cta {
+      text-align: center;
+      padding: 3rem 7rem 2.4rem 7rem; }
+      .container .right-col .cta p {
+        font-weight: 200; }
+      .container .right-col .cta span {
+        font-weight: 700; } }
