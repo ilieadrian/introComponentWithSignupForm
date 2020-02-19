@@ -4,48 +4,37 @@ const lastName = document.getElementById('last__name');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 
+function checkRequired (inputArr) {
+    inputArr.forEach(function(input) {
+        if(input.value.trim() === '') {
+        error(input)
+        } else {
+        succes(input);
+        }   
+    });
+}
+
+function error(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control error';
+}
+
+function succes(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control';
+}
+
+function checkEmail(input) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (re.test(input.value.trim())){
+        succes(input);
+    } else {
+        error(input);
+    };
+}
+
 form.addEventListener("submit", e => {
     e.preventDefault();
-    checkInputs();
+    checkRequired([first__name, last__name, email, password]);
+    checkEmail(email);
 });
-
-function checkInputs(e) {
-    const firstNameID = document.getElementById('firstNameID');
-    const lastNameID = document.getElementById('lastNameID');
-    const emailID = document.getElementById('emailID');
-    const passwordID = document.getElementById('passwordID');
-
-    if (firstName.value === '')
-        {   
-            firstNameID.classList.add('error');
-        } else{
-            firstNameID.classList.remove('error');
-        }
-
-    if (lastName.value === '')
-        {   
-            lastNameID.classList.add('error');
-        } else{
-            lastNameID.classList.remove('error');
-        }
-
-    if (email.value === '')
-        {   
-            emailID.classList.add('error');
-        } else if (!emailValid(email.value)){
-            emailID.classList.add('error')
-        } else {
-            emailID.classList.remove('error');
-        } 
-    
-    if (password.value === '')
-        {   
-            passwordID.classList.add('error');
-        } else{
-            passwordID.classList.remove('error');
-    } 
-}
-
-function emailValid (email) {
-    return /\S+@\S+\.\S+/.test(email)
-}

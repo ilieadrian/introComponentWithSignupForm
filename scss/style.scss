@@ -103,8 +103,6 @@
         display: flex;
         flex-direction: column;
 
-        
-
         .form-control {
             
             input {
@@ -144,11 +142,15 @@
                 input {
                     border: 1.5px solid $primary-color;
                     background: url('/dist/images/icon-error.svg') no-repeat scroll 95%;
-                    color: $primary-color;
+                    color: $neutral-color-1;
+
+                    &::placeholder {
+                        color: $primary-color;
+                    }
 
                     &:focus {
                         border: 1.5px solid $primary-color;
-                        }      
+                    }
                 }
             
                 p {
