@@ -6,7 +6,7 @@
   box-sizing: border-box; }
 
 .bg {
-  background: url("/dist/images/bg-intro-desktop.png") #ff7a7a;
+  background: url("../images/bg-intro-desktop.png") #ff7a7a;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -97,7 +97,7 @@
     padding-right: 1.2rem; }
   .right-col .email__form .error input {
     border: 1.5px solid #ff7a7a;
-    background: url("/dist/images/icon-error.svg") no-repeat scroll 95%;
+    background: url("../images/icon-error.svg") no-repeat scroll 95%;
     color: #3e3c49; }
     .right-col .email__form .error input::placeholder {
       color: #ff7a7a; }
